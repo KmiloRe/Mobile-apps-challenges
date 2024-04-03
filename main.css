@@ -1,0 +1,167 @@
+* {
+    background-color: #1b1b1b
+}
+
+body {
+    line-height: normal;
+}
+
+:root {
+    /* commons */
+    --font-inter: Inter;
+    --mate: #1b1b1b;
+    --blanco: #fff;
+    --rojo: #c40233;
+    --color-black: #000;
+}
+
+
+.grid_principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: transparent;
+}
+
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 150px;
+    height: 200px;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.div3 {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 150px;
+    height: 200px;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.div4 {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 150px;
+    height: 200px;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.div5 {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 150px;
+    height: 200px;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.div6 {
+    grid-area: 4 / 1 / 5 / 2;
+    width: 150px;
+    height: 200px;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.div7 {
+    grid-area: 4 / 2 / 5 / 3;
+    width: 150px;
+    height: 200px;
+    background: var(--rojo);
+    text-align: center;
+}
+
+.div8 {
+    grid-area: 1 / 1 / 2 / 3;
+
+    background: var(--rojo);
+    text-align: center;
+}
+
+
+.imagen-de-whatsapp-2024-02-17-icon1 {
+    background-color: transparent;
+    top: 1px;
+    height: 172.1px;
+    width: 200px;
+
+    object-fit: cover;
+    position: fixed;
+    z-index: 99 !important;
+}
+
+.user_icon {
+    width: 47px;
+    height: 43px;
+
+    cursor: pointer;
+    z-index: 1;
+    left: 250px;
+    top: 30px;
+    position: fixed;
+
+}
+
+.home_icon {
+    width: 47px;
+    height: 43px;
+    z-index: 1;
+    left: 42%;
+    top: 450px;
+    position: fixed;
+    background-color: transparent;
+}
+
+.circular_image {
+    top: 5px;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    border-radius: 65px;
+    object-fit: cover;
+    /* z-index: 1; */
+}
+
+.like_image {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    width: 21px;
+    height: 18px;
+    z-index: 2;
+    background-color: transparent;
+  }
+
+/* Titulo */
+h4 {
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    font-size: 11px;
+    margin:2px;
+  }
+  h2 {
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    font-size: 20px;
+    margin:2px;
+  }
+  .like_button {
+    height: 23px;
+    width: 40px;
+    position: relative;
+    border-radius: 30px;
+    background-color: var(--blanco);
+    z-index: 1;
+    bottom: 10px;
+    left: 70%;
+  }
+
