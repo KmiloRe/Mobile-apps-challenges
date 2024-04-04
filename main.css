@@ -17,6 +17,7 @@ body {
 
 
 .grid_principal {
+    display: flex;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, 1fr);

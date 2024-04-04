@@ -1,2 +1,2 @@
-let count = 0;
+window.onload = renderLikedItems;
 

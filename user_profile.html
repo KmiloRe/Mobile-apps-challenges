@@ -19,56 +19,10 @@
     <img class="home_icon" loading="eager" alt="" src="./public/homeblack.png" id="home_icon"
       onclick="location.href='index.html';" />
     
+      <div id="liked-items-container"></div>
 
 
-      <!-- <div class="div2" id="container"></div>
-
-      <script>
-        let items = [
-          {
-            "image": "./public/nave-1@2x.png",
-            "type": "naves",
-            "name": "Milenial falcon",
-            "year": "1997",
-            "maker": "Hasbro",
-            "owned": 1,
-          },
-          {
-            "image": "./public/nave-1@2x.png",
-            "type": "naves",
-            "name": "Star destroyer",
-            "year": "2001",
-            "maker": "Matel",
-            "owned": 0,
-          },
-        ];
       
-        // Get the container element
-        const container = document.getElementById('container');
-      
-        // Iterate over each item and create a div for each
-        items.forEach(item => {
-          // Create a new div element
-          const div = document.createElement('div2');
-      
-          // Set the class for the div
-          div.classList.add('item');
-      
-          // Set the inner HTML of the div using template literals
-          div.innerHTML = `
-            <img class="circular_image" src="${item.image}" alt="${item.name}">
-            <h4>${item.name}</h4>
-            // <h4>Type: ${item.type}</h4>
-            <h4>Year: ${item.year}</h4>
-            <h4>Maker: ${item.maker}</h4>
-            
-          `;
-      
-          // Append the div to the container
-          container.appendChild(div);
-        });
-      </script>
-     -->
 
     
     
@@ -101,12 +55,27 @@
         />
         <script>
           function toggleImage(img) {
-              if (img.src.endsWith('darkheart.png')) {
-                  img.src = './public/heart.png';
-              } else {
-                  img.src = './public/darkheart.png';
-              }
-          }
+  const itemData = {
+    image: img.parentElement.parentElement.querySelector('.circular_image').src,
+    name: img.parentElement.parentElement.querySelector('h4:nth-of-type(1)').textContent,
+    year: img.parentElement.parentElement.querySelector('h4:nth-of-type(2)').textContent,
+    maker: img.parentElement.parentElement.querySelector('h4:nth-of-type(3)').textContent,
+    rarity: img.parentElement.parentElement.querySelector('h2').textContent
+  };
+
+  let likedItems = JSON.parse(localStorage.getItem('likedItems')) || [];
+
+  if (img.src.endsWith('darkheart.png')) {
+    img.src = './public/heart.png';
+    likedItems.push(itemData);
+  } else {
+    img.src = './public/darkheart.png';
+    likedItems = likedItems.filter(item => item !== itemData);
+  }
+
+  localStorage.setItem('likedItems', JSON.stringify(likedItems));
+  renderLikedItems();
+}
           </script>
       </div>
     </div>
@@ -139,12 +108,27 @@
         />
         <script>
           function toggleImage(img) {
-              if (img.src.endsWith('darkheart.png')) {
-                  img.src = './public/heart.png';
-              } else {
-                  img.src = './public/darkheart.png';
-              }
-          }
+  const itemData = {
+    image: img.parentElement.parentElement.querySelector('.circular_image').src,
+    name: img.parentElement.parentElement.querySelector('h4:nth-of-type(1)').textContent,
+    year: img.parentElement.parentElement.querySelector('h4:nth-of-type(2)').textContent,
+    maker: img.parentElement.parentElement.querySelector('h4:nth-of-type(3)').textContent,
+    rarity: img.parentElement.parentElement.querySelector('h2').textContent
+  };
+
+  let likedItems = JSON.parse(localStorage.getItem('likedItems')) || [];
+
+  if (img.src.endsWith('darkheart.png')) {
+    img.src = './public/heart.png';
+    likedItems.push(itemData);
+  } else {
+    img.src = './public/darkheart.png';
+    likedItems = likedItems.filter(item => item !== itemData);
+  }
+
+  localStorage.setItem('likedItems', JSON.stringify(likedItems));
+  renderLikedItems();
+}
           </script>
       </div>
 
@@ -240,6 +224,29 @@
     </div>
   </div>
 
+  <script>
+    function renderLikedItems() {
+  const likedItems = JSON.parse(localStorage.getItem('likedItems')) || [];
+  const container = document.getElementById('liked-items-container');
+  container.innerHTML = '';
+
+  likedItems.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.innerHTML = `
+      <img class="circular_image" src="${item.image}" alt="${item.name}">
+      <h4>${item.name}</h4>
+      <h4>Year: ${item.year}</h4>
+      <h4>Maker: ${item.maker}</h4>
+      <h2>Rarity: ${item.rarity}</h2>
+    `;
+    container.appendChild(itemDiv);
+  });
+}
+  </script>
+  <script>
+    window.onload = renderLikedItems;
+  </script>
+  
 </body>
 
 </html>
