@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(64, 1, 94);
+}
+.reproductor{
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    background: transparent;
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    overflow: hidden;
+    color: rgb(171, 91, 182);
+}
+.nombre-musica,
+.nombre-artista{
+    text-align: center;
+    text-transform: capitalize;
+
+}
+.nombre-musica{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.nombre-artista{
+    font-size: 20px;
+}
+.disk{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: url('../img/Randy.png');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08) ;
+}
+.disk::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(64, 1, 94);
+}
