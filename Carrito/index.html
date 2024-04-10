@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="page">
+        <div class="principal">
+            <div class="logo">
+                <img src="img/imagen-de-whatsapp-20240217-a-las-1252-1@2x.png" alt="logo" class="imagen">
+            </div>
+            <div class="ir">
+                <a href="" class="btn"><button><a href="#">Carrito</a></button></a>
+                <a href="" class="btn"><button><a href="#">Inicio</a></button></a>
+            </div>
+        </div>
+	 	<section class="shopping-cart dark">
+	 		<div class="container">
+		        <div class="block-heading">
+		          <h2>Carrito de compras</h2>
+		          <p>¡Los mejores articulos al mejor precio!</p>
+		        </div>
+		        <div class="content">
+	 				<div class="row">
+	 					<div class="col-md-12 col-lg-8">
+	 						<div class="items">
+				 				<div class="product" data-name="Iphone 5" data-price="300">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="img/image.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#">Iphone 5</a>
+								 							<div class="product-info">
+									 							<div>Display: <span class="value">Sobrio</span></div>
+									 							<div>RAM: <span class="value">4GB</span></div>
+									 							<div>Memory: <span class="value">32GB</span></div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-4 quantity">
+							 							<label for="quantity1">Cantidad:</label>
+							 							<input id="quantity1" type="number" value="1" class="form-control quantity-input">
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							<span>$300</span>
+							 						</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 				<div class="product" data-name="CPU" data-price="1200">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="https://icons.iconarchive.com/icons/itzikgur/my-seven/128/Backup-IBM-Server-icon.png">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#">CPU</a>
+								 							<div class="product-info">
+									 							<div>Colores: <span class="value">RGB</span></div>
+									 							<div>RAM: <span class="value">16GB</span></div>
+									 							<div>Memory: <span class="value">256GB</span></div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-4 quantity">
+							 							<label for="quantity2">Cantidad:</label>
+							 							<input id="quantity2" type="number" value="1" class="form-control quantity-input">
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							<span>$1200</span>
+							 						</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 				<div class="product" data-name="Camara Nikon" data-price="500">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="https://icons.iconarchive.com/icons/jonathan-rey/devices-pack-3/128/Camera-Reflex-Nikon-D5200-Bronze-icon.png">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#">Camara Nikon</a>
+								 							<div class="product-info">
+									 							<div>Calidad: <span class="value">4k y 8k</span></div>
+									 							<div>RAM: <span class="value">4GB</span></div>
+									 							<div>Memory: <span class="value">32GB</span></div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-4 quantity">
+							 							<label for="quantity3">Cantidad:</label>
+							 							<input id="quantity3" type="number" value="1" class="form-control quantity-input">
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							<span>$500</span>
+							 						</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 			</div>
+			 			</div>
+			 			<div class="col-md-12 col-lg-4">
+			 				<div class="summary">
+			 					<h3>Resumen</h3>
+                                 <ul id="product-list"></ul> <!-- Lista de productos -->
+			 					<div class="summary-item"><span class="text">Subtotal</span><span class="price" id="subtotal">$0</span></div>
+			 					<div class="summary-item"><span class="text">Descuento</span><span class="price">$0</span></div>
+			 					<div class="summary-item"><span class="text">IBA</span><span class="price">$0</span></div>
+			 					<div class="summary-item"><span class="text">Total</span><span class="price" id="total">$0</span></div>
+			 					<button id="checkoutButton" type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+			 					
+				 			</div>
+			 			</div>
+		 			</div> 
+		 		</div>
+	 		</div>
+		</section>
+	</main>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="module" src="js/script.js"></script>
+</html>
