@@ -5,7 +5,12 @@ import java.util.Scanner;
 public class java {
 
     public static String stringops(String str) {
+        String rojo = "\u001B[41m";
+        String reset = "\u001B[0m"; 
+        String amarillo = "\u001B[33m";
+
         if (str == null || str.length() == 0 || str.isEmpty() ) {
+            System.out.println(rojo + "No valido" + reset);
             return "no valido";
         }
             //quito caracteres no ascii (stack)
@@ -27,6 +32,7 @@ public class java {
             }
             map.put(ch, i);
         }
+        System.out.println("substring mas largo sin chars repetidos: " + amarillo + str.substring(inicioIndex, inicioIndex + maxLen) + reset);
         return str.substring(inicioIndex, inicioIndex + maxLen);
     }
 
@@ -50,8 +56,9 @@ public class java {
         String input = myObj.nextLine();
         myObj.close();
         String res = stringops(input);
-        String aux=(res.equals("no valido") ? (amarillo + "no valido"+ reset) : res );
+        //! esto deberia funcionar pero no lo hace
+        // // String aux=(res.equals("no valido") ? (amarillo + "no valido"+ reset) : res );
         
-        System.out.println("substring mas largo sin chars repetidos: " + aux);
+        //System.out.println("substring mas largo sin chars repetidos: " + amarillo + res + reset);
     }
 }
