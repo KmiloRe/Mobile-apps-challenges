@@ -11,9 +11,9 @@ public class java {
 
         if (str == null || str.length() == 0 || str.isEmpty() || str.isBlank()) {
             System.out.println(rojo + "No valido" + reset);
-            return "no valido";
+            return "0";
         }
-        // quito caracteres no ascii (stack)
+        // quito caracteres no ascii (stack_overflow)
         str.replaceAll("[^\\x00-\\x7F]", "");
 
         Map<Character, Integer> map = new HashMap<>();
@@ -34,7 +34,7 @@ public class java {
         }
         System.out.println("substring mas largo sin chars repetidos: " + amarillo
                 + str.substring(inicioSofar, inicioSofar + maxLen) + reset);
-        return str.substring(inicioSofar, inicioSofar + maxLen);
+        return "1";
     }
 
     public static void main(String[] args) {
@@ -48,7 +48,9 @@ public class java {
 
         String input = myObj.nextLine();
         myObj.close();
+
         stringops(input);
+
         // ! esto deberia funcionar pero no lo hace
         // ? Como funciona el operador terciario en java???
         // String aux=(res.equals("no valido") ? (amarillo + "no valido"+ reset) : res
