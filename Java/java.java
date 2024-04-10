@@ -9,7 +9,7 @@ public class java {
         String reset = "\u001B[0m";
         String amarillo = "\u001B[33m";
 
-        if (str == null || str.length() == 0 || str.isEmpty()) {
+        if (str == null || str.length() == 0 || str.isEmpty() || str.isBlank()) {
             System.out.println(rojo + "No valido" + reset);
             return "no valido";
         }
