@@ -53,8 +53,5 @@ public class java {
         // ? Como funciona el operador terciario en java???
         // String aux=(res.equals("no valido") ? (amarillo + "no valido"+ reset) : res
         // );
-
-        // //System.out.println("substring mas largo sin chars repetidos: " + amarillo +
-        // res + reset);
     }
 }
