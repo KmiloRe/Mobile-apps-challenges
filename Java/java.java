@@ -1,4 +1,4 @@
-
+//todo: JAVA substring mas largo sin chars repetidos
 import java.util.*;
 import java.util.Scanner;
 
