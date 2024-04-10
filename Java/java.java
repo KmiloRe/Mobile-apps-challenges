@@ -34,18 +34,24 @@ public class java {
         //String input = "abcadcbsb$aiaosaftyuhjmnp$56a";
         //String input = "sdasdsadsajaklsldkskoispia#$6tas";
     //* para colores
-   // public static final String ANSI_RESET = "\u001B[0m"; 
-  
+    String rojo = "\u001B[41m";
+    String reset = "\u001B[0m"; 
+    String amarillo = "\u001B[33m";
     // Declaring the color 
     // Custom declaration 
     //public static final String ANSI_YELLOW = "\u001B[33m"; 
   
         
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Enter username");
+        Scanner myObj = new Scanner(System.in); 
+
+        
+        System.out.println(amarillo + "Enter username" + reset);
 
         String input = myObj.nextLine();
+        myObj.close();
+        String res = stringops(input);
+        String aux=(res.equals("no valido") ? (amarillo + "no valido"+ reset) : res );
         
-        System.out.println("substring mas largo sin chars repetidos: " +  stringops(input));
+        System.out.println("substring mas largo sin chars repetidos: " + aux);
     }
 }
