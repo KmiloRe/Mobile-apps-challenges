@@ -1,6 +1,8 @@
-import java.util.*;
 
-public class stringops {
+import java.util.*;
+import java.util.Scanner;
+
+public class java {
 
     public static String stringops(String str) {
         if (str == null || str.length() == 0 || str.isEmpty() ) {
@@ -30,7 +32,20 @@ public class stringops {
 
     public static void main(String[] args) {
         //String input = "abcadcbsb$aiaosaftyuhjmnp$56a";
-        String input = "";
+        //String input = "sdasdsadsajaklsldkskoispia#$6tas";
+    //* para colores
+   // public static final String ANSI_RESET = "\u001B[0m"; 
+  
+    // Declaring the color 
+    // Custom declaration 
+    //public static final String ANSI_YELLOW = "\u001B[33m"; 
+  
+        
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter username");
+
+        String input = myObj.nextLine();
+        
         System.out.println("substring mas largo sin chars repetidos: " +  stringops(input));
     }
 }
